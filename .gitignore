@@ -80,3 +80,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+# Keep the published Unity WebGL build
+!/Build/
+!/Build/**
+
