@@ -6,10 +6,14 @@
     <title>Unity WebGL Player | SleepWalking</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-  </head>
+  <style>
+html, body { width: 100%; height: 100%; overflow: hidden; background: #000; }
+#unity-container.unity-mobile { position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); width: min(100vw, 177.77778vh); height: min(100vh, 56.25vw); width: min(100vw, 177.77778dvh); height: min(100dvh, 56.25vw); }
+</style>
+</head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
+      <canvas id="unity-canvas" width=960 height=540 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -57,11 +61,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/WebGL.loader.js";
+      var loaderUrl = buildUrl + "/SleepWalkingPage.loader.js";
       var config = {
-        dataUrl: buildUrl + "/b323b54abbfc9de4b9040acd1b63b86c.data.unityweb",
-        frameworkUrl: buildUrl + "/01faaa41e5a8c530ff1aacf66a17795d.js.unityweb",
-        codeUrl: buildUrl + "/85b74af4344f8f5c384a3763df9ddb90.wasm.unityweb",
+        dataUrl: buildUrl + "/342edeb74a1d9551e446e445aaa8db65.data.unityweb",
+        frameworkUrl: buildUrl + "/6ff4054e7ca9404c77462cf9eb51e45e.js.unityweb",
+        codeUrl: buildUrl + "/70d66431695d9bd9a5c7f7bc26ff8841.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "SleepWalking",
@@ -95,7 +99,7 @@
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
         canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.height = "540px";
       }
 
       loadingBar.style.display = "block";
